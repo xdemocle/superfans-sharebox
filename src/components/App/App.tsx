@@ -1,18 +1,18 @@
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
 import logo from '../../logo.svg'
-import './App.css'
+import styles from './App.module.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="App-text">
+    <div className={styles.root}>
+      <header className={styles.header}>
+        <img src={logo} className={styles.logo} alt="logo" />
+        <p className={styles.text}>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
-          className="App-link"
+          className={styles.link}
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
