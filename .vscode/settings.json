@@ -13,6 +13,6 @@
     "editor.autoIndent": "keep",
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": false
-    }
+    },
+    "css.lint.unknownAtRules": "ignore"
   }
-  

@@ -4,22 +4,39 @@
   "private": true,
   "homepage": "https://xdemocle.github.io/superfans-sharebox",
   "dependencies": {
+    "@craco/craco": "^6.1.1",
+    "@hot-loader/react-dom": "^17.0.1",
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.1",
+    "@types/react-dom": "^17.0.1",
     "a11y-react-emoji": "^1.1.2",
+    "autoprefixer": "^9",
+    "craco-plugin-react-hot-reload": "^0.1.0",
+    "gh-pages": "^3.1.0",
+    "postcss": "^7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-hot-loader": "^4.13.0",
     "react-scripts": "4.0.2",
     "react-use-localstorage": "^3.5.3",
     "reactjs-localstorage": "^1.0.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "typescript": "^4.1.2",
     "use-global-hook": "^0.2.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject"
   },
   "eslintConfig": {
     "extends": [
@@ -38,20 +55,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss7-compat": "^2.0.3",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "autoprefixer": "^9",
-    "gh-pages": "^3.1.0",
-    "postcss": "^7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "typescript": "^4.1.2"
   }
 }
