@@ -4,6 +4,15 @@ Another showcase for Typescript and React.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Tools & Libraries
+
+- Create React App: boilerplate of choice with React support bundling, code checks and moreover;
+- Craco: overwrite Create react App settings without ejecting the CRA;
+- Typescript: subset JavaScript language implementing type checking;
+- Tailwindcss: styling framework of choice;
+- gh-pages: for deploying to GitHub Pages;
+- react-hot-loader: Tweak React components in real time ⚛️⚡️;
+
 ## Available Scripts
 
 In the project directory, you can run:
