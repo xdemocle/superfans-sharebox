@@ -9,7 +9,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Create React App: boilerplate of choice with React support bundling, code checks and moreover;
 - Craco: overwrite Create react App settings without ejecting the CRA;
 - Typescript: subset JavaScript language implementing type checking;
+- CSS Modules: Approach designed to fix the problem of the global scope in CSS;
 - Tailwindcss: styling framework of choice;
+- Prettier: awesome tool multi-platform for an unified way of writing clean code across the developer team;
+- lint-staged: adding extra task on git pre-commit for linting the code;
 - gh-pages: for deploying to GitHub Pages;
 - react-hot-loader: Tweak React components in real time ⚛️⚡️;
 
