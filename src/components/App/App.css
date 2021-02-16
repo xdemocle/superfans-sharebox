@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.App-text {
+  @apply font-bold;
+  @apply py-2;
+  @apply px-4;
+  @apply rounded;
+}
