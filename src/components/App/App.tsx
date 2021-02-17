@@ -8,9 +8,12 @@ import Sharepage from '../../pages/sharepage/sharepage'
 import styles from './app.module.css'
 
 function App() {
+  const basename =
+    process.env.NODE_ENV !== 'development' ? '/superfans-sharebox' : '/'
+
   return (
     <div className={styles.root}>
-      <Router>
+      <Router basename={basename}>
         <Switch>
           <Route exact path="/">
             <Home />
