@@ -8,25 +8,16 @@ const Home = () => {
     <div className={styles.root}>
       <header className={styles.header}>
         <img src={logo} className={styles.logo} alt="logo" />
+        <div>superfans-sharebox</div>
       </header>
       <main>
-        <ul>
-          <li>
-            <NavLink to="/" className={styles.link}>
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/dashboard" className={styles.link}>
-              Dashboard
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/sharebox" className={styles.link}>
-              Sharebox
-            </NavLink>
-          </li>
-        </ul>
+        <NavLink to="/dashboard" className={styles.link}>
+          Dashboard
+        </NavLink>{' '}
+        |{' '}
+        <NavLink to="/sharebox" className={styles.link}>
+          Sharebox
+        </NavLink>
       </main>
     </div>
   )
