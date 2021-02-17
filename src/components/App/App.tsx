@@ -1,25 +1,31 @@
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
-import logo from '../../logo.svg'
-import styles from './App.module.css'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Dashboard from '../../pages/dashboard/dashboard'
+import Home from '../../pages/home/home'
+import Sharebox from '../../pages/sharebox/sharebox'
+import Sharepage from '../../pages/sharepage/sharepage'
+import styles from './app.module.css'
 
 function App() {
   return (
     <div className={styles.root}>
-      <header className={styles.header}>
-        <img src={logo} className={styles.logo} alt="logo" />
-        <p className={styles.text}>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className={styles.link}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
+          <Route path="/sharebox">
+            <Sharebox />
+          </Route>
+          <Route path="/sharepage">
+            <Sharepage />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   )
 }
