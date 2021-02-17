@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Create React App: boilerplate of choice with React support bundling, code checks and moreover;
 - Craco: overwrite Create react App settings without ejecting the CRA;
 - Typescript: subset JavaScript language implementing type checking;
-- CSS Modules: Approach designed to fix the problem of the global scope in CSS;
+- CSS Modules: Approach designed to fix the problem of the global scope in CSS. Added by Create React App;
 - Tailwindcss: styling framework of choice;
 - Prettier: awesome tool multi-platform for an unified way of writing clean code across the developer team;
 - lint-staged: adding extra task on git pre-commit for linting the code;
@@ -21,6 +21,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 For such small web application I didn't want add complexity with a state manager like Redux. (But honestly was also to save some time :money_mouth_face: )
 
 Instead, for this app example, I approached a simple state offline ready and made thanks to the help of `use-global-hook` npm library and browser LocalStorage support.
+
+No internationalization implemented.
 
 ## Available Scripts
 
