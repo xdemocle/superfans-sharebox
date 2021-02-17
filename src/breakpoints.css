@@ -1,0 +1,14 @@
+/**
+ * Breakpoints values
+ */
+
+@value sm: screen and (min-width: 640px);
+@value md: screen and (min-width: 768px);
+@value lg: screen and (min-width: 1024px);
+@value xl: screen and (min-width: 1280px);
+@value 2xl: screen and (min-width: 1536px);
+
+/*
+ * We parallel use same media queries values from taiwindcss:
+ * https://tailwindcss.com/docs/breakpoints
+ */
