@@ -1,6 +1,4 @@
 @value sm from '../../breakpoints.css';
-/* @value md from '../../breakpoints.css';
-@value lg from '../../breakpoints.css'; */
 
 .root {
   @apply min-h-screen;
@@ -66,6 +64,7 @@
 
 .column {
   flex-basis: 50%;
+  width: 50%;
   @apply text-sm;
 }
 
@@ -90,64 +89,4 @@
     @apply mt-6;
     @apply ml-2;
   }
-}
-
-.inputSharing {
-  @apply w-full;
-  @apply p-2;
-  @apply text-sm;
-  background-color: #f5f5f5;
-}
-
-.feed {
-}
-
-.feedHeader {
-  @apply px-3;
-  @apply py-2;
-  @apply font-extrabold;
-  background-color: #efefef;
-}
-
-.feedFooter {
-  @apply py-1;
-  @apply px-2;
-  @apply text-right;
-  background-color: #efefef;
-}
-
-.feedRows {
-}
-
-@media sm {
-  .feedRows {
-    max-height: 143px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
-}
-
-.feedRow {
-  @apply relative;
-  @apply px-3;
-  @apply py-2;
-  @apply pl-10;
-  @apply leading-4;
-}
-
-.feedRow:nth-child(even) {
-  background-color: #efefef;
-}
-
-.feedRow:nth-child(odd) {
-  background-color: #f7f7f7;
-}
-
-.feedEmoji {
-  @apply text-2xl;
-  @apply ml-2;
-  @apply absolute;
-  @apply left-0;
-  top: 50%;
-  transform: translateY(-50%);
 }

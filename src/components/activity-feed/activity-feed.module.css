@@ -1,0 +1,54 @@
+@value sm from '../../breakpoints.css';
+
+.main {
+}
+
+.header {
+  @apply px-3;
+  @apply py-2;
+  @apply font-extrabold;
+  background-color: #efefef;
+}
+
+.footer {
+  @apply py-1;
+  @apply px-2;
+  @apply text-right;
+  background-color: #efefef;
+}
+
+.rows {
+}
+
+@media sm {
+  .rows {
+    max-height: 143px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+
+.row {
+  @apply relative;
+  @apply px-3;
+  @apply py-2;
+  @apply pl-10;
+  @apply leading-4;
+}
+
+.row:nth-child(even) {
+  background-color: #efefef;
+}
+
+.row:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
+.emoji {
+  @apply text-2xl;
+  @apply ml-2;
+  @apply absolute;
+  @apply left-0;
+  top: 50%;
+  transform: translateY(-50%);
+}

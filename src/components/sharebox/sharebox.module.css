@@ -1,0 +1,82 @@
+.root {
+}
+
+.tabs {
+  @apply flex;
+  @apply w-full;
+  height: 2.25rem;
+}
+
+.tab {
+  @apply w-1/4;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1.2rem;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.tabMail {
+  composes: tab;
+  @apply relative;
+  background-color: #9b9b9b;
+  background-image: url('../../assets/sharebox/mail.png');
+  background-size: 1.5rem;
+}
+
+.tabMail:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 0.5rem solid #9b9b9b;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-left: 0.5rem solid transparent;
+  @apply absolute;
+  top: 100%;
+  left: 1.5rem;
+}
+
+.tabFacebook {
+  composes: tab;
+  background-color: #0062a8;
+  background-image: url('../../assets/sharebox/facebook.png');
+}
+
+.tabTwitter {
+  composes: tab;
+  background-image: url('../../assets/sharebox/twitter.png');
+  background-color: #2aa0e9;
+}
+
+.tabAttachment {
+  composes: tab;
+  background-image: url('../../assets/sharebox/attachment.png');
+  background-color: #499f00;
+}
+
+.main {
+  @apply p-4;
+}
+
+.input,
+.textarea {
+  @apply w-full;
+  @apply p-2;
+  @apply text-sm;
+}
+
+.textarea {
+  height: 8rem;
+  resize: none;
+  @apply leading-7;
+  background-color: #fff;
+}
+
+.buttonSend {
+  @apply px-6;
+  @apply py-1;
+  @apply text-xs;
+  background-color: #499f00;
+  color: #fff;
+}

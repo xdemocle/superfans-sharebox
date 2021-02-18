@@ -1,0 +1,31 @@
+.input {
+  @apply w-full;
+  @apply p-2;
+  @apply text-sm;
+  padding-right: 2.25rem;
+  background-color: #f5f5f5;
+}
+
+.copied {
+  @apply ml-3;
+  @apply float-right;
+  color: #ef4444;
+}
+
+.button {
+  @apply absolute;
+  @apply top-0;
+  @apply right-0;
+  outline: none;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: url('../../assets/sharebox/paste.png') #509d00 no-repeat center
+    center;
+  background-size: 1.2rem 1.2rem;
+  outline: none;
+  border: none;
+}
+
+.buttonText {
+  display: none;
+}

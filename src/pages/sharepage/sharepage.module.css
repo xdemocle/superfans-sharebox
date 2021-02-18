@@ -1,3 +1,85 @@
+@value sm from '../../breakpoints.css';
+
 .root {
-  text-align: center;
+  @apply min-h-screen;
+  @apply text-center;
+  @apply relative;
+  background-color: #efefef;
+}
+
+@media sm {
+  .root {
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply justify-center;
+  }
+}
+
+.wrapper {
+  @apply relative;
+  @apply w-full;
+  @apply p-4;
+}
+
+@media sm {
+  .wrapper {
+    @apply p-0;
+  }
+}
+
+.box {
+  @apply mx-auto;
+  @apply p-6;
+  background-color: #fff;
+  color: #666666;
+}
+
+@media sm {
+  .box {
+    max-width: 36rem;
+  }
+}
+
+.header {
+  @apply pb-3;
+}
+
+.title {
+  @apply text-4xl;
+  @apply font-bold;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+.helpLabel {
+  @apply absolute;
+  @apply bottom-0;
+  @apply px-2;
+  @apply py-1;
+  @apply text-xs;
+}
+
+.helpLabelLeft {
+  composes: helpLabel;
+  @apply left-0;
+  @apply text-base;
+  @apply select-none;
+  @apply cursor-pointer;
+}
+
+.helpLabelRight {
+  composes: helpLabel;
+  @apply right-0;
+}
+
+.helpLabelLeftCheckbox {
+  display: inline;
+  vertical-align: middle;
 }
