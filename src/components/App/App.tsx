@@ -1,7 +1,6 @@
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Dashboard from '../../pages/dashboard/dashboard'
 import Home from '../../pages/home/home'
 import Sharebox from '../../pages/sharebox/sharebox'
 import Sharepage from '../../pages/sharepage/sharepage'
@@ -18,13 +17,10 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/dashboard">
-            <Dashboard />
-          </Route>
-          <Route path="/sharebox">
+          <Route path="/sharebox/:username">
             <Sharebox />
           </Route>
-          <Route path="/sharepage">
+          <Route path="/share/:id">
             <Sharepage />
           </Route>
         </Switch>

@@ -11,12 +11,18 @@ const Home = () => {
         <div>superfans-sharebox</div>
       </header>
       <main>
-        <NavLink to="/dashboard" className={styles.link}>
-          Dashboard
+        <strong>Demo Dashboards:</strong>
+        <br />
+        <NavLink to="/sharebox/mikek" className={styles.link}>
+          Mike Knights
         </NavLink>{' '}
         |{' '}
-        <NavLink to="/sharebox" className={styles.link}>
-          Sharebox
+        <NavLink to="/sharebox/charliec" className={styles.link}>
+          Charlie Chaplin
+        </NavLink>{' '}
+        |{' '}
+        <NavLink to="/sharebox/johnd" className={styles.link}>
+          John Doe
         </NavLink>
       </main>
     </div>
