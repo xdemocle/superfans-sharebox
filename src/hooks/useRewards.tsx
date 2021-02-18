@@ -28,10 +28,10 @@ const useRewards = (props: Props) => {
   const setReward = (id: string, value: string) => {
     const existentReward = find(rewardsContainer, { id })
 
-    if (existentReward) {
+    if (existentReward && value !== 'escaped') {
       existentReward.value = value
     } else {
-      rewardsContainer.push({ id, value })
+      rewardsContainer.push({ id, value, timestamp: new Date().getTime() })
     }
 
     // Persist it

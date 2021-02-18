@@ -22,7 +22,7 @@
 
 @media sm {
   .rows {
-    max-height: 143px;
+    max-height: 152px;
     overflow-x: hidden;
     overflow-y: scroll;
   }

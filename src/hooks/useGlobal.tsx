@@ -4,6 +4,7 @@ import globalHook, { Store } from 'use-global-hook'
 export type Reward = {
   id: string
   value: string
+  timestamp: number
 }
 
 export type MyState = {

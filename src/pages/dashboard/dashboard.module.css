@@ -63,19 +63,11 @@
 }
 
 .column {
-  flex-basis: 50%;
-  width: 50%;
   @apply text-sm;
 }
 
 .columnLeft {
   composes: column;
-}
-
-@media sm {
-  .columnLeft {
-    @apply mr-2;
-  }
 }
 
 .columnRight {
@@ -85,6 +77,16 @@
 }
 
 @media sm {
+  .column {
+    flex-basis: 50%;
+    width: 50%;
+    @apply text-base;
+  }
+
+  .columnLeft {
+    @apply mr-2;
+  }
+
   .columnRight {
     @apply mt-6;
     @apply ml-2;

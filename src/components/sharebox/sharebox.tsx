@@ -1,21 +1,34 @@
-import React from 'react'
-import { setSyntheticLeadingComments } from 'typescript'
+import React, { useState } from 'react'
+import useRewards from '../../hooks/useRewards'
 import styles from './sharebox.module.css'
 
 interface Props {
   email: string
+  username: string
   uniqueShareLink: string
 }
 
 const Sharebox = (props: Props) => {
-  const { email, uniqueShareLink } = props
+  const { email, username, uniqueShareLink } = props
+  const { setReward, hasVotedAlready } = useRewards({ username })
+  const [destinationEmail, setDestinationEmail] = useState('')
 
   const clickTabHandler = (text: string) => {
     window.alert(`Demo click: ${text}`)
   }
 
+  const inputOnChangeHandler = (event: {
+    target: { value: React.SetStateAction<string> }
+  }) => {
+    setDestinationEmail(event.target.value)
+  }
+
   const onSubmitHandler = () => {
-    window.alert('Submitting form')
+    if (destinationEmail === email) {
+      setReward(username + new Date().getTime(), 'escaped')
+    } else {
+      window.alert('Submitting form')
+    }
   }
 
   return (
@@ -62,6 +75,7 @@ const Sharebox = (props: Props) => {
             name="email"
             placeholder="Email address"
             className={styles.input}
+            onChange={inputOnChangeHandler}
           />
         </div>
         <div className="mb-3">

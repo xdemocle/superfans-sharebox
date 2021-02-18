@@ -37,6 +37,7 @@ const Dashboard = () => {
               <Sharebox
                 uniqueShareLink={uniqueLink}
                 email={`${username}@mailprovider.com`}
+                username={username}
               />
             </div>
           </main>

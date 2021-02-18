@@ -14,13 +14,15 @@ const ActivityFeed = (props: Props) => {
     return reward.value === 'accepted'
   }).length
 
-  debugger
+  const rewardsSorted = rewards.sort((a, b) => {
+    return b.timestamp - a.timestamp
+  })
 
   return (
     <section className={styles.main}>
       <header className={styles.header}>Activity feed</header>
       <main className={styles.rows}>
-        {rewards.map((reward) => {
+        {rewardsSorted.map((reward) => {
           let output = null
 
           switch (reward.value) {

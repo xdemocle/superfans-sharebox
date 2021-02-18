@@ -21,7 +21,7 @@ const Sharepage = () => {
 
   const userAcceptHandler = (accepted: string) => {
     if (simulate) {
-      setReward(visitorRewardId, 'escape')
+      setReward(visitorRewardId, 'escaped')
     } else {
       setReward(visitorRewardId, accepted)
     }
