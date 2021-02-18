@@ -1,0 +1,51 @@
+@value sm from '../../breakpoints.css';
+
+.root {
+  @apply min-h-screen;
+  @apply text-center;
+  @apply relative;
+  background-color: #efefef;
+}
+
+@media sm {
+  .root {
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply justify-center;
+  }
+}
+
+.wrapper {
+  @apply relative;
+  @apply w-full;
+  @apply p-4;
+}
+
+@media sm {
+  .wrapper {
+    @apply p-0;
+  }
+}
+
+.box {
+  @apply mx-auto;
+  @apply p-6;
+  background-color: #fff;
+  color: #666666;
+}
+
+@media sm {
+  .box {
+    max-width: 36rem;
+  }
+}
+
+.header {
+  @apply pb-3;
+}
+
+.title {
+  @apply text-4xl;
+  @apply font-bold;
+}
