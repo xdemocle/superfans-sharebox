@@ -13,15 +13,15 @@ const Home = () => {
       <main>
         <strong>Demo Dashboards:</strong>
         <br />
-        <NavLink to="/sharebox/mikek" className={styles.link}>
+        <NavLink to="/dashboard/mikek" className={styles.link}>
           Mike Knights
         </NavLink>{' '}
         |{' '}
-        <NavLink to="/sharebox/charliec" className={styles.link}>
+        <NavLink to="/dashboard/charliec" className={styles.link}>
           Charlie Chaplin
         </NavLink>{' '}
         |{' '}
-        <NavLink to="/sharebox/johnd" className={styles.link}>
+        <NavLink to="/dashboard/johnd" className={styles.link}>
           John Doe
         </NavLink>
       </main>
