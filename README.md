@@ -26,7 +26,7 @@ Instead, for this app example, I approached a simple state offline ready and mad
 
 ### Syncs across browser tabs
 
-No syncing between browser tabs implemented because it's only for demo purpouse. In a real scenario with backend data support, our frontend web application shouldn't need it at all. But an idea could be using [BroadcastChannel]{https://github.com/pubkey/broadcast-channel}
+No syncing between browser tabs implemented because it's only for demo purpouse. In a real scenario with backend data support, our frontend web application shouldn't need it at all. But an idea could be using [BroadcastChannel](https://github.com/pubkey/broadcast-channel)
 
 ### Internationalization i18n
 
