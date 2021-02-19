@@ -66,6 +66,16 @@
   @apply text-sm;
 }
 
+.input {
+  @apply border-white;
+  border-width: 0.125rem;
+  border-style: solid;
+}
+
+.inputError {
+  border-color: rgb(220, 38, 38);
+}
+
 .textarea {
   height: 7.375rem;
   resize: none;

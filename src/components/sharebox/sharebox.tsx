@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import classnames from 'classnames'
 import useRewards from '../../hooks/useRewards'
 import styles from './sharebox.module.css'
 
@@ -8,10 +9,13 @@ interface Props {
   uniqueShareLink: string
 }
 
+const regexEmailCheck = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
 const Sharebox = (props: Props) => {
   const { email, username, uniqueShareLink } = props
   const { setReward, hasVotedAlready } = useRewards({ username })
   const [destinationEmail, setDestinationEmail] = useState('')
+  const [emailError, setEmailError] = useState(false)
 
   const shareboxTextarea = (
     <span>
@@ -33,8 +37,13 @@ const Sharebox = (props: Props) => {
     setDestinationEmail(event.target.value)
   }
 
-  const onSubmitHandler = () => {
-    if (destinationEmail === email) {
+  const onSubmitHandler = (event: React.ChangeEvent<any>) => {
+    event.preventDefault()
+    setEmailError(false)
+
+    if (!destinationEmail.length || !regexEmailCheck.test(destinationEmail)) {
+      setEmailError(true)
+    } else if (destinationEmail === email) {
       setReward(username + new Date().getTime(), 'escaped')
     } else {
       window.alert('Submitting form')
@@ -74,32 +83,37 @@ const Sharebox = (props: Props) => {
         </a>
       </header>
       <main className={styles.main}>
-        <div className="mb-3 text-sm">
-          <p>
-            <span className="mr-2">From</span>
-            <strong>{email}</strong>
-          </p>
-        </div>
-        <div className="mb-3">
-          <input
-            name="email"
-            placeholder="Email address"
-            className={styles.input}
-            onChange={inputOnChangeHandler}
-          />
-        </div>
-        <div className="mb-3">
-          <div
-            className={styles.textarea}
-            contentEditable="true"
-            children={shareboxTextarea}
-          />
-        </div>
-        <div>
-          <button className={styles.buttonSend} onClick={onSubmitHandler}>
-            Send email
-          </button>
-        </div>
+        <form onSubmit={onSubmitHandler}>
+          <div className="mb-3 text-sm">
+            <p>
+              <span className="mr-2">From</span>
+              <strong>{email}</strong>
+            </p>
+          </div>
+          <div className="mb-3">
+            <input
+              name="email"
+              placeholder="Email address"
+              className={classnames(
+                styles.input,
+                emailError && styles.inputError
+              )}
+              onChange={inputOnChangeHandler}
+            />
+          </div>
+          <div className="mb-3">
+            <div
+              className={styles.textarea}
+              contentEditable="true"
+              children={shareboxTextarea}
+            />
+          </div>
+          <div>
+            <button className={styles.buttonSend} type="submit">
+              Send email
+            </button>
+          </div>
+        </form>
       </main>
     </div>
   )
