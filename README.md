@@ -16,11 +16,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - gh-pages: for deploying to GitHub Pages;
 - react-hot-loader: Tweak React components in real time ⚛️⚡️;
 
-## Consideration
+## Considerations
+
+### State management
 
 For such small web application I didn't want add complexity with a state manager like Redux. (But honestly was also to save some time :money_mouth_face: )
 
 Instead, for this app example, I approached a simple state offline ready and made thanks to the help of `use-global-hook` npm library and browser LocalStorage support.
+
+### Syncs across browser tabs
+
+No syncing between browser tabs implemented because it's only for demo purpouse. In a real scenario with backend data support, our frontend web application shouldn't need it at all. But an idea could be using [BroadcastChannel]{https://github.com/pubkey/broadcast-channel}
+
+### Internationalization i18n
 
 No internationalization implemented.
 
