@@ -1,0 +1,39 @@
+.wrapper {
+  @apply fixed;
+  @apply inset-0;
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  background-color: rgba(38, 44, 38, 0.5);
+}
+
+.main {
+  @apply relative;
+  width: 17rem;
+  @apply px-5;
+  @apply py-6;
+  background-color: #f5f5f5;
+}
+
+.input {
+  @apply w-full;
+  @apply p-2;
+  @apply text-sm;
+  background-color: #fff;
+}
+
+.button {
+  @apply px-6;
+  @apply py-1;
+  background-color: #499f00;
+  color: #fff;
+}
+
+.closeButton {
+  @apply absolute;
+  @apply top-0;
+  @apply right-0;
+  @apply px-2;
+  @apply cursor-pointer;
+  @apply text-2xl;
+}

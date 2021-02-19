@@ -25,13 +25,18 @@ const useRewards = (props: Props) => {
     globalActions.setRewards(rewardsContainer)
   }
 
-  const setReward = (id: string, value: string) => {
+  const setReward = (id: string, value: string, visitorName?: string) => {
     const existentReward = find(rewardsContainer, { id })
 
     if (existentReward && value !== 'escaped') {
       existentReward.value = value
     } else {
-      rewardsContainer.push({ id, value, timestamp: new Date().getTime() })
+      rewardsContainer.push({
+        id,
+        value,
+        timestamp: new Date().getTime(),
+        visitorName
+      })
     }
 
     // Persist it

@@ -26,7 +26,7 @@ const Dashboard = () => {
           <main className={styles.main}>
             <div className={styles.columnLeft}>
               <InputSharingLink uniqueShareLink={uniqueLink} />
-              <p className="pb-2 leading-4 mb-2">
+              <p className="pb-2 leading-4 mb-2 text-sm">
                 Welcome back, you've referred friends!
                 <br />
                 Keep going for more rewards.

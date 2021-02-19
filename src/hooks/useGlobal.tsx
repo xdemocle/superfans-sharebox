@@ -5,6 +5,7 @@ export type Reward = {
   id: string
   value: string
   timestamp: number
+  visitorName?: string
 }
 
 export type MyState = {

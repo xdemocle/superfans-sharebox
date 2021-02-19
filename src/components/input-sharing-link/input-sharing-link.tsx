@@ -18,7 +18,7 @@ const InputSharingLink = (props: Props) => {
 
   return (
     <Fragment>
-      <p className="pb-1">
+      <p className="pb-1 text-sm">
         Your unique sharing link{' '}
         {!!inputCopied && <span className={styles.copied}>copied!</span>}
       </p>

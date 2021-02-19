@@ -7,6 +7,7 @@
   @apply px-3;
   @apply py-2;
   @apply font-extrabold;
+  @apply text-sm;
   background-color: #efefef;
 }
 
@@ -14,15 +15,17 @@
   @apply py-1;
   @apply px-2;
   @apply text-right;
+  @apply text-sm;
   background-color: #efefef;
 }
 
 .rows {
+  @apply text-sm;
 }
 
 @media sm {
   .rows {
-    max-height: 152px;
+    max-height: 144px;
     overflow-x: hidden;
     overflow-y: scroll;
   }

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import classnames from 'classnames'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useHistory, useParams } from 'react-router-dom'
 import uniqid from 'uniqid'
 import useRewards from '../../hooks/useRewards'
+import InputDialog from '../../components/input-dialog/input-dialog'
 import styles from './sharepage.module.css'
 
 interface RouteParams {
@@ -14,14 +15,20 @@ interface RouteParams {
 const visitorRewardId = uniqid()
 
 const Sharepage = () => {
+  const history = useHistory()
   const { username } = useParams<RouteParams>()
   const { setReward, hasVotedAlready } = useRewards({ username })
+  const [showDialog, setShowDialog] = useState(false)
   const [simulate, setSimulate] = useState(false)
   const hasVoted = hasVotedAlready(visitorRewardId)
+
+  const onCloseDialog = () => setShowDialog(false)
 
   const userAcceptHandler = (accepted: string) => {
     if (simulate) {
       setReward(visitorRewardId, 'escaped')
+    } else if (accepted === 'accepted') {
+      setShowDialog(true)
     } else {
       setReward(visitorRewardId, accepted)
     }
@@ -31,6 +38,11 @@ const Sharepage = () => {
     const target = event.target
     const value = target.type === 'checkbox' ? target.checked : target.value
     setSimulate(value)
+  }
+
+  const callbackInputDialog = (visitorName: string) => {
+    setReward(visitorRewardId, 'accepted', visitorName)
+    history.push(`/thanks/${username}`)
   }
 
   return (
@@ -48,13 +60,12 @@ const Sharepage = () => {
             <div className="mb-3">--------------------------------</div>
             {!hasVoted ? (
               <div>
-                <Link
-                  to={`/thanks/${username}`}
-                  className={classnames(styles.link, 'text-xl')}
+                <a
+                  className={classnames(styles.link, 'text-xl cursor-pointer')}
                   onClick={() => userAcceptHandler('accepted')}
                 >
                   Accept invitation
-                </Link>
+                </a>
                 <div className="py-2">or</div>
                 <Link
                   to={`/thanks/${username}`}
@@ -88,6 +99,10 @@ const Sharepage = () => {
         Notice: Each page reload simulate a new visitor ID! Current ID:{' '}
         {visitorRewardId}
       </div>
+
+      {showDialog && (
+        <InputDialog callback={callbackInputDialog} onClose={onCloseDialog} />
+      )}
     </div>
   )
 }

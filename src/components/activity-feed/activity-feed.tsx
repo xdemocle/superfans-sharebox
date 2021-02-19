@@ -34,7 +34,8 @@ const ActivityFeed = (props: Props) => {
                     symbol="😀"
                     label="laughing"
                   />
-                  Your friend <strong>{username}</strong> earned you a reward!
+                  Your friend <strong>{reward.visitorName}</strong> earned you a
+                  reward!
                 </div>
               )
               break

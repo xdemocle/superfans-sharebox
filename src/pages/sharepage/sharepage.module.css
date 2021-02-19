@@ -4,16 +4,11 @@
   @apply min-h-screen;
   @apply text-center;
   @apply relative;
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply justify-center;
   background-color: #efefef;
-}
-
-@media sm {
-  .root {
-    @apply flex;
-    @apply flex-col;
-    @apply items-center;
-    @apply justify-center;
-  }
 }
 
 .wrapper {
@@ -60,7 +55,6 @@
 
 .helpLabel {
   @apply absolute;
-  @apply bottom-0;
   @apply px-2;
   @apply py-1;
   @apply text-xs;
@@ -69,6 +63,7 @@
 .helpLabelLeft {
   composes: helpLabel;
   @apply left-0;
+  @apply bottom-0;
   @apply text-base;
   @apply select-none;
   @apply cursor-pointer;
@@ -76,6 +71,8 @@
 
 .helpLabelRight {
   composes: helpLabel;
+  @apply top-0;
+  @apply left-0;
   @apply right-0;
 }
 

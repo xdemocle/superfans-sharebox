@@ -13,6 +13,16 @@ const Sharebox = (props: Props) => {
   const { setReward, hasVotedAlready } = useRewards({ username })
   const [destinationEmail, setDestinationEmail] = useState('')
 
+  const shareboxTextarea = (
+    <span>
+      To my good friend.
+      <br />
+      Please buy things here:
+      <br />
+      {uniqueShareLink}
+    </span>
+  )
+
   const clickTabHandler = (text: string) => {
     window.alert(`Demo click: ${text}`)
   }
@@ -64,7 +74,7 @@ const Sharebox = (props: Props) => {
         </a>
       </header>
       <main className={styles.main}>
-        <div className="mb-3">
+        <div className="mb-3 text-sm">
           <p>
             <span className="mr-2">From</span>
             <strong>{email}</strong>
@@ -79,13 +89,11 @@ const Sharebox = (props: Props) => {
           />
         </div>
         <div className="mb-3">
-          <div className={styles.textarea} contentEditable="true">
-            To my good friend.
-            <br />
-            Please buy things here:
-            <br />
-            {uniqueShareLink}
-          </div>
+          <div
+            className={styles.textarea}
+            contentEditable="true"
+            children={shareboxTextarea}
+          />
         </div>
         <div>
           <button className={styles.buttonSend} onClick={onSubmitHandler}>
