@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/superfans-sharebox/static/css/main.9bcb0543.chunk.css",
-    "main.js": "/superfans-sharebox/static/js/main.9d503be2.chunk.js",
-    "main.js.map": "/superfans-sharebox/static/js/main.9d503be2.chunk.js.map",
+    "main.css": "/superfans-sharebox/static/css/main.8a30abc0.chunk.css",
+    "main.js": "/superfans-sharebox/static/js/main.7a44ba0c.chunk.js",
+    "main.js.map": "/superfans-sharebox/static/js/main.7a44ba0c.chunk.js.map",
     "runtime-main.js": "/superfans-sharebox/static/js/runtime-main.aaecd41a.js",
     "runtime-main.js.map": "/superfans-sharebox/static/js/runtime-main.aaecd41a.js.map",
-    "static/js/2.cdd6ecc2.chunk.js": "/superfans-sharebox/static/js/2.cdd6ecc2.chunk.js",
-    "static/js/2.cdd6ecc2.chunk.js.map": "/superfans-sharebox/static/js/2.cdd6ecc2.chunk.js.map",
+    "static/js/2.f0837b4d.chunk.js": "/superfans-sharebox/static/js/2.f0837b4d.chunk.js",
+    "static/js/2.f0837b4d.chunk.js.map": "/superfans-sharebox/static/js/2.f0837b4d.chunk.js.map",
     "index.html": "/superfans-sharebox/index.html",
-    "static/css/main.9bcb0543.chunk.css.map": "/superfans-sharebox/static/css/main.9bcb0543.chunk.css.map",
-    "static/js/2.cdd6ecc2.chunk.js.LICENSE.txt": "/superfans-sharebox/static/js/2.cdd6ecc2.chunk.js.LICENSE.txt",
+    "static/css/main.8a30abc0.chunk.css.map": "/superfans-sharebox/static/css/main.8a30abc0.chunk.css.map",
+    "static/js/2.f0837b4d.chunk.js.LICENSE.txt": "/superfans-sharebox/static/js/2.f0837b4d.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/superfans-sharebox/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.aaecd41a.js",
-    "static/js/2.cdd6ecc2.chunk.js",
-    "static/css/main.9bcb0543.chunk.css",
-    "static/js/main.9d503be2.chunk.js"
+    "static/js/2.f0837b4d.chunk.js",
+    "static/css/main.8a30abc0.chunk.css",
+    "static/js/main.7a44ba0c.chunk.js"
   ]
 }
